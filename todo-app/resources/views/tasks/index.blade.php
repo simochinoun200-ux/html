@@ -3,19 +3,21 @@
 @section('content')
 <div class="container">
     
+    <h1>Ajouter Un Tache</h1>
     <div class="card mb-4">
         <div class="card-header">nouveau tache</div>
         <div class="card-body">
             <form action="{{ route('tasks.store') }}" method="POST">
                 @csrf
                 <div class="input-group">
-                    <input type="text" name="title" class="form-control" required>
+                    <input type="text" name="title" class="form-control" required placeholder="Ajouter un Tache...">
                     <button class="btn btn-primary">ajouter</button>
                 </div>
             </form>
         </div>
     </div>
-    
+
+    <h1>Liste des Tache</h1>
     <div class="card">
         <div class="card-header">List des taches</div>
         <div class="card-body">
@@ -26,7 +28,7 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-        <th>user</t
+        <th>user</th>
         <th>tache</th>
         <th>status</th>
         <th>actions</th>
